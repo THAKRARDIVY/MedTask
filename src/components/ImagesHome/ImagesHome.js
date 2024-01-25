@@ -2,16 +2,9 @@
 import React from "react";
 import { Box } from "@mui/material";
 import SimpleImageSlider from "react-simple-image-slider";
-import HomeImages from '../../Data'
+import HomeImages from "../../Data";
 
 const ImagesHome = () => {
-  const images = [
-    { url: "/HomeImgs/image1.jpg" },
-    { url: "/HomeImgs/image2.jpg" },
-    { url: "/HomeImgs/image3.jpg" },
-    { url: "/HomeImgs/image4.jpg" },
-  ];
-
   return (
     <Box>
       <SimpleImageSlider
