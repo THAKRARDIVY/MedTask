@@ -40,7 +40,7 @@ const header = () => {
               }}
             >
               <Box>
-                <Image src={"/React.png"} alt="logo" width={30} height={30} />
+                <Image src={"/logo.jpg"} alt="logo" width={30} height={30} />
               </Box>
               <Box
                 sx={{
@@ -112,7 +112,7 @@ const header = () => {
                 {!manu && (
                   <div>
                     <Image
-                      src={"/React.png"}
+                      src={"/logo.jpg"}
                       alt="logo"
                       width={30}
                       height={30}

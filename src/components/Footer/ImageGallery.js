@@ -1,19 +1,11 @@
 import React from "react";
 import { Box } from "@mui/material";
-import SimpleImageSlider from "react-simple-image-slider";
+import SwiperImage from "../SwiperImage";
 
 const ImageGallery = () => {
-
   return (
     <Box className="mr-2 pr-2">
-      <SimpleImageSlider
-        width="48%"
-        height={150}
-        images={HomeImages?.HomeImages?.map((img) => img.url)}
-        showBullets={true}
-        showNavs={true}
-        style={{ objectFit: "cover" }}
-      />
+      <SwiperImage width={"48%"} height={150} />
     </Box>
   );
 };
