@@ -91,7 +91,7 @@ const header = () => {
                   marginTop: ["10px", null, "0"],
                 }}
               >
-                <Button variant="contained" color="inherit">
+                <Button variant="contained" sx={{ border: "2px solid black" }}>
                   Pay Now
                 </Button>
               </Box>
@@ -181,7 +181,7 @@ const header = () => {
                       <Button
                         className="m-2 p-2"
                         variant="contained"
-                        color="inherit"
+                        sx={{ border: "2px solid black" }}
                       >
                         Pay Now
                       </Button>
