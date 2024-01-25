@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import SwiperImage from "@/components/SwiperImage";
+import SwiperImage from "@/components/CommonComponents/SwiperImage";
 
 const ImagesHome = () => {
   return (

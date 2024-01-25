@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import CountUp from "react-countup";
 import { useMediaQuery } from "@/Hooks/useMediaQuery";
-import CardDetails from "@/components/Details/index";
+import CardDetails from "@/components/CommonComponents/CardDetails";
 const details = () => {
   const MediaQuery = useMediaQuery("(min-width:700px)");
 
