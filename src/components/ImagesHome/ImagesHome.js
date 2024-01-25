@@ -2,6 +2,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import SimpleImageSlider from "react-simple-image-slider";
+import HomeImages from '../../Data'
 
 const ImagesHome = () => {
   const images = [
@@ -16,7 +17,7 @@ const ImagesHome = () => {
       <SimpleImageSlider
         width="100%"
         height={350}
-        images={images}
+        images={HomeImages?.HomeImages?.map((img) => img.url)}
         showBullets={true}
         showNavs={true}
         size="100%"

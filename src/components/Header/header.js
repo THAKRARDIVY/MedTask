@@ -10,6 +10,8 @@ import { useMediaQuery } from "@/Hooks/useMediaQuery";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import CloseIcon from "@mui/icons-material/Close";
+import HeaderItem from "../../Data";
+import HeaderData from "../../Data";
 
 const header = () => {
   const MediaQuery = useMediaQuery("(min-width:700px)");
@@ -48,18 +50,12 @@ const header = () => {
                   alignItems: "center",
                 }}
               >
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  Home
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  About Us
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  Careers
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  Contact Us
-                </Typography>
+                {HeaderData?.HeaderData.map((hnItem) => (
+                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    {hnItem.headers}
+                  </Typography>
+                ))}
+
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   <FormControl
                     variant="standard"
@@ -80,10 +76,9 @@ const header = () => {
                       label="Age"
                       onChange={handleChange}
                     >
-                      <MenuItem value={10}>Emergency care</MenuItem>
-                      <MenuItem value={20}>Surgery</MenuItem>
-                      <MenuItem value={30}>Diagnostic imaging</MenuItem>
-                      <MenuItem value={30}>X-ray/radiology services</MenuItem>
+                      {HeaderItem?.HeaderItem?.map((hs) => (
+                        <MenuItem value={10}>{hs.headers}</MenuItem>
+                      ))}
                     </Select>
                   </FormControl>
                 </Typography>
@@ -143,37 +138,15 @@ const header = () => {
                     sx={{ height: "100vh" }}
                   >
                     <Box className="flex flex-col items-center">
-                      <Typography
-                        variant="h6"
-                        component="div"
-                        className="text-center"
-                      >
-                        Home
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                        className="text-center"
-                      >
-                        About Us
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                        className="text-center"
-                      >
-                        Careers
-                      </Typography>
-                      <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                        className="text-center"
-                      >
-                        Contact Us
-                      </Typography>
+                      {HeaderData?.HeaderData.map((hnItem) => (
+                        <Typography
+                          variant="h6"
+                          component="div"
+                          sx={{ flexGrow: 1 }}
+                        >
+                          {hnItem.headers}
+                        </Typography>
+                      ))}
                       <Typography
                         variant="h6"
                         component="div"
@@ -199,12 +172,9 @@ const header = () => {
                             label="Services"
                             onChange={handleChange}
                           >
-                            <MenuItem value={10}>Emergency care</MenuItem>
-                            <MenuItem value={20}>Surgery</MenuItem>
-                            <MenuItem value={30}>Diagnostic imaging</MenuItem>
-                            <MenuItem value={40}>
-                              X-ray/radiology services
-                            </MenuItem>
+                            {HeaderItem?.HeaderItem?.map((hs) => (
+                              <MenuItem value={10}>{hs.headers}</MenuItem>
+                            ))}
                           </Select>
                         </FormControl>
                       </Typography>
